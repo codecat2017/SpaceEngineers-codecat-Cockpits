@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition>
+	<Id>
+		<SubtypeId>codecat_cockpit_sv2_Large</SubtypeId>
+	</Id>
+	<Icon>Textures\Icons\codecat_cockpit_sv2.dds</Icon>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\Cubes\Large\codecat_cockpit_sv2_Large\codecat_cockpit_sv2_Large.mwm</Model>
+	<BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\codecat_cockpit_sv2_Large\codecat_cockpit_sv2_Large_Constr1.mwm" />
+		<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Large\codecat_cockpit_sv2_Large\codecat_cockpit_sv2_Large_Constr2.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\codecat_cockpit_sv2_Large\codecat_cockpit_sv2_Large_Constr3.mwm" />
+	</BuildProgressModels>
+	<MountPoints>
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.22" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.22" />
+		<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="0.99" EndY="1.22" />
+		<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.22" />
+		<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+	</MountPoints>
+	<BlockPairName>codecat_cockpit_sv2</BlockPairName>
+</Definition>

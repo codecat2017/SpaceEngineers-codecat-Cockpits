@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Animations>
+
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>codecatStandCockpit_ANIM</SubtypeId>
+      </Id>
+      <DisplayName>codecat_stand_v1</DisplayName>
+      <Icon>Textures\FAKE.dds</Icon>
+      <AnimationModel>Models\Characters\Animations\codecat_character_stand_pose_1.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+      <AllowInCockpit>false</AllowInCockpit>
+      <AllowWithWeapon>false</AllowWithWeapon>
+    </Animation>
+
+  </Animations>
+</Definitions>

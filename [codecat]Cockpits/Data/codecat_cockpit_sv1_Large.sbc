@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    
+   <!-- Region codecat Cockpits -->
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+      <Id>
+        <TypeId>Cockpit</TypeId>
+        <SubtypeId>codecat_cockpit_sv1_Large</SubtypeId><!-- Large block cockpit -->
+      </Id>
+      <DisplayName>[codecat] Cockpit sv1</DisplayName>
+      <Icon>Textures\GUI\Icons\codecat_cockpit_sv1.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\codecat_cockpit_sv1_Large/codecat_cockpit_sv1_Large.mwm</Model>
+      <PrimarySound>BlockCockpitLrg</PrimarySound>
+<!--      <GlassModel>Models\Cubes\Large\CockpitGlass.mwm</GlassModel> -->
+      <CharacterAnimation>codecatStandCockpit_ANIM</CharacterAnimation> <!-- Add custom pose! -->
+      <Components>
+				<Component Subtype="SteelPlate" Count="50" />
+				<Component Subtype="InteriorPlate" Count="20" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="Motor" Count="5" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="SmallTube" Count="20" />
+				<Component Subtype="Computer" Count="8" />
+				<Component Subtype="Display" Count="9" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="InteriorPlate" Count="5" />
+				<Component Subtype="BulletproofGlass" Count="10" />
+				<Component Subtype="SteelPlate" Count="50" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+	<MountPoints>
+		<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" />
+		<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" />
+		<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" />
+		<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" />
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+	</MountPoints>
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\codecat_cockpit_sv1_Large\codecat_cockpit_sv1_Large_Constr1.mwm" />
+		<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Large\codecat_cockpit_sv1_Large\codecat_cockpit_sv1_Large_Constr2.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\codecat_cockpit_sv1_Large\codecat_cockpit_sv1_Large_Constr3.mwm" />
+      </BuildProgressModels>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>codecat_cockpit_sv1</BlockPairName>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>50</BuildTimeSeconds>
+      <EnableFirstPerson>true</EnableFirstPerson>
+      <EnableShipControl>true</EnableShipControl>
+      <EnableBuilderCockpit>true</EnableBuilderCockpit>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <OxygenCapacity>60</OxygenCapacity>
+      <IsPressurized>true</IsPressurized>
+      <GetInSound>ShipLrgCockpitIn</GetInSound>
+      <GetOutSound>ShipLrgCockpitOut</GetOutSound>
+    </Definition>
+    
+    </CubeBlocks>
+</Definitions>

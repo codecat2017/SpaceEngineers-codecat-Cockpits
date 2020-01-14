@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Definition xsi:type="AnimationControllerDefinition">
+    <Id Type="MyObjectBuilder_AnimationControllerDefinition" Subtype="Default_Astronaut" />
+    <Layers>
+      <Layer>
+        <Name>codecatStandingCockpitPose</Name>
+        <Mode>Replace</Mode>
+        <StateMachine>codecatSCP_SM</StateMachine> 
+        <InitialSMNode>Any</InitialSMNode>
+      </Layer>
+    </Layers>
+    <StateMachines>
+      <StateMachine>
+        <Name>codecatSCP_SM</Name>
+        <Nodes>
+		
+          <Node>
+            <Name>codecatStandCockpit_ANIM</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>0</X>
+                <Y>0</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>20</X>
+                  <Y>0</Y>
+                </EdPos>
+                <PathToModel>Models\Characters\Animations\codecat_character_stand_pose_1.mwm</PathToModel>
+                <Loop>true</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+            </AnimationTree>
+            <EdPos>
+              <X>-20</X>
+              <Y>-180</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+		  
+		  <Node>
+            <Name>Any</Name>
+            <EdPos>
+              <X>-132</X>
+              <Y>-63</Y>
+            </EdPos>
+            <Type>Any</Type>
+          </Node>
+		  
+		</Nodes>
+		  
+        <Transitions>
+		
+		  <!-- Transition from your pose to any other pose -->
+		  <Transition From="codecatStandCockpit_ANIM" To="Any" TimeInSec="0" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="sitting" Op="Equal" Rhs="0" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+          </Transition>
+
+		  <!-- Transition from any other pose to your pose -->
+		  <Transition Name="codecatStandCockpit_ANIM" From="Any" To="codecatStandCockpit_ANIM" TimeInSec="0" Sync="Restart">
+            <Priority xsi:nil="true" />
+          </Transition>
+		  
+        </Transitions>
+      </StateMachine>
+    </StateMachines>
+  </Definition>
+</Definitions>
